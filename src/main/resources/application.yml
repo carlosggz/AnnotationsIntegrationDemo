@@ -1,0 +1,23 @@
+spring:
+  rabbitmq:
+    host: ${app.rabbit.host}
+    port: ${app.rabbit.port}
+    username: ${app.rabbit.user}
+    password: ${app.rabbit.pwd}
+    virtual-host: ${app.rabbit.vhost}
+    template:
+      exchange: ${app.queue.exchange}
+      routing-key: ${app.queue.routingKey}
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://${app.db.server}:${app.db.port}/${app.db.database}
+    userName: ${app.db.user}
+    password: ${app.db.pwd}
+  jpa:
+    hibernate.ddl-auto: update
+    show-sql: false
+    properties.hibernate:
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+logging:
+  file:
+    name: ./build/logs/my.log

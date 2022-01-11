@@ -1,0 +1,24 @@
+app:
+  pollerMs: -1
+  faker:
+    enable: true
+    cron: "-"
+  pop3:
+    server: pop.server
+    port: 995
+    ssl: true
+    user: user
+    pwd: mypass
+    email: myuser@server.com
+    debug: false
+  ftp:
+    host: localhost
+    port: 2121
+    user: myuser
+    pwd: mypass
+    passive: true
+  queue:
+    exchange: demo
+    routingKey: demo.toApp
+  http:
+    url: https://postman-echo.com/post

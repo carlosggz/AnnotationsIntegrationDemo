@@ -1,0 +1,36 @@
+app:
+  pollerMs: 2000
+  faker:
+    enable: true
+    cron: "*/2 * * * * *"
+  pop3:
+    server: pop3.example.com
+    port: 995
+    ssl: true
+    user: myuser@example.com
+    pwd: my-password
+    email: myuser@example.com
+    debug: false
+  ftp:
+    host: localhost
+    port: 2121
+    user: myuser
+    pwd: mypass
+    passive: true
+  queue:
+    exchange: demo
+    routingKey: demo.toApp
+  http:
+    url: https://postman-echo.com/post
+  rabbit:
+    host: localhost
+    port: 5672
+    user: myuser
+    pwd: mypass
+    vhost: /
+  db:
+    database: demo
+    user: myuser
+    pwd: mypass
+    port: 5444
+    server: localhost
